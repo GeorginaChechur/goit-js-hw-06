@@ -9,7 +9,9 @@ console.log(length)
 
 input.onblur = function () {
     if (input.value.length != parseInt(length)) {
+        input.classList.remove('valid');
         input.classList.add('invalid');
+
     } else {
         input.classList.remove('invalid');
         input.classList.add('valid');

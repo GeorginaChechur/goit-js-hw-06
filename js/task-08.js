@@ -4,18 +4,23 @@ console.log(submitForm)
 submitForm.addEventListener("submit", clickSubmit);
 
 function clickSubmit(evt) {
-    evt.preventDefault()
-    const form = evt.target;
-    console.log(form)
+  evt.preventDefault()
+  const form = evt.target;
+  console.log(form)
 
-    const login = form.elements.email.value;
-    const password = form.elements.password.value;
+  const login = form.elements.email.value;
+  const password = form.elements.password.value;
   
   if (login === "" || password === "") {
-      return alert("Please fill in all the fields!");
+    return alert("Please fill in all the fields!");
   }
     
- console.log(`Login: ${login}, Password: ${password}`);
+  // console.log(`Login: ${login}, Password: ${password}`);
+  console.log({
+    Login: login,
+    Password: password
+  });
+
   form.reset();
 
 }
